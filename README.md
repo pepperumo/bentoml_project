@@ -179,17 +179,17 @@ bentoml build
 Create a Docker container from your Bento with the desired tag:
 
 ```bash
-bentoml containerize admissions_prediction:latest --image-tag giuseppe_rumore_admissions_prediction:latest
+bentoml containerize admissions_prediction:latest --image-tag your_name_admissions_prediction:latest
 ```
 
-This command builds a Docker image named `giuseppe_rumore_admissions_prediction:latest`.
+This command builds a Docker image named `your_name_admissions_prediction:latest`.
 
 ### 10. Run the Docker Container
 
 Run the container locally to serve the API on port 3000:
 
 ```bash
-docker run --rm -p 3000:3000 giuseppe_rumore_admissions_prediction:latest
+docker run --rm -p 3000:3000 your_name_admissions_prediction:latest
 ```
 
 ### 11. Export the Docker Image
@@ -197,7 +197,7 @@ docker run --rm -p 3000:3000 giuseppe_rumore_admissions_prediction:latest
 Export the Docker image as a tarball:
 
 ```bash
-docker save -o bento_image.tar giuseppe_rumore_admissions_prediction:latest
+docker save -o bento_image.tar your_name_admissions_prediction:latest
 ```
 
 ## Security Notes
@@ -248,15 +248,15 @@ For production, consider:
 7. **Build & Containerize the Bento:**
      ```
      bentoml build
-     bentoml containerize admissions_prediction:latest --image-tag giuseppe_rumore_admissions_prediction:latest
+     bentoml containerize admissions_prediction:latest --image-tag your_name_admissions_prediction:latest
      ```
 
 8. **Export the Docker Image:**
      ```
-     docker save -o bento_image.tar giuseppe_rumore_admissions_prediction:latest
+     docker save -o bento_image.tar your_name_admissions_prediction:latest
      ```
 
 9. **Run the Docker Container:**
      ```
-     docker run --rm -p 3000:3000 giuseppe_rumore_admissions_prediction:latest
+     docker run --rm -p 3000:3000 your_name_admissions_prediction:latest
      ```
