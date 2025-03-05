@@ -2,3 +2,5 @@
 .DS_Store?
 /venv
 /clean_data.csv
+bentoml-env
+bento_image.tar

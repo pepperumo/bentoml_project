@@ -1,0 +1,27 @@
+service: "src.service:svc"
+description: "Predict the chance of student admission"
+labels:
+  owner: "DataScientest"
+  project: "Admissions Prediction"
+
+include:
+  - "src/*.py"
+  - "data/processed/*.csv"
+  - "models/**"
+  - "tests/*.py"
+
+python:
+  packages:
+    - bentoml
+    - scikit-learn
+    - pandas
+    - numpy
+    - PyJWT
+    - requests
+    - pytest
+
+docker:
+  distro: debian
+  python_version: "3.9"
+  system_packages:
+    - build-essential
